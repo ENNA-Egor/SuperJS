@@ -1,24 +1,25 @@
 th{
-    border: 1px solid rgb(255, 0, 0);
+    /* border: 1px solid rgb(255, 0, 0); */
     background-color: rgb(255, 243, 192);
     text-transform: uppercase;
     font-size: 12px;
 }
 td {
-    border: 1px solid rgb(74, 185, 98);
+    /* border: 1px solid rgb(74, 185, 98); */
    height: 15px;
    font-size: 12px;
 }
 
 .pod {
-    border: 1px solid rgb(76, 74, 185);
+    /* border: 1px solid rgb(76, 74, 185); */
     background-color: rgb(253, 249, 231);
     text-align: center;
     /* text-transform: lowercase; */
 }
 
 .table{
-    border: 1px solid rgb(163, 148, 248); 
+    /* border: 1px solid rgb(163, 148, 248);  */
+    background-color: rgb(187, 187, 187);
 }
 h3{
     padding: auto;
