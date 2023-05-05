@@ -9,18 +9,14 @@ for (let key in COLOR_PALLETE){
             `
             document.querySelector('table').append(row)
             for (let n=1;n<COLOR_PALLETE[key][i].length;n++){
-            let newrow = document.createElement('td') 
+            let newrow = document.createElement('td')
             newrow.innerHTML =`
-                <tr></tr>
-                `
+                <tr>`
                 document.querySelector('table').append(newrow);
                 let bgColor = ('#'+COLOR_PALLETE[key][i][n]);
                 newrow.style.backgroundColor = bgColor;
                 newrow.classList.add('pallet');
-            
-                // if(COLOR_PALLETE[key][i][n]==''){
-                //     newrow.style.display='none';
-                // }
+                `</tr>`
             }
     }
 }
