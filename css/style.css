@@ -19,7 +19,7 @@ td {
 
 .table{
     /* border: 1px solid rgb(163, 148, 248);  */
-    background-color: rgb(187, 187, 187);
+    background-color: rgb(226, 224, 224);
 }
 h3{
     padding: auto;
@@ -28,8 +28,8 @@ h3{
     text-transform: uppercase;
 }
 .pallet{
-    height: 15px;
-    width: 15px;
+    height: 25px;
+    width: 25px;
 }
 
 

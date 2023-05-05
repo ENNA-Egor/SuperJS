@@ -5,22 +5,28 @@ for (let key in COLOR_PALLETE){
     for(let i=0; i<COLOR_PALLETE[key].length; i++ ){
         let row = document.createElement('tr')
         row.innerHTML =`
-            <td colspan="5" class="pod">${COLOR_PALLETE[key][i][0]}</td>
+            <td colspan="3" class="pod">${COLOR_PALLETE[key][i][0]}</td>
             `
             document.querySelector('table').append(row)
-            for (let n=1;n<COLOR_PALLETE[key][i].length;n++){
-            let newrow = document.createElement('td') 
-            newrow.innerHTML =`
-                <tr></tr>
-                `
-                document.querySelector('table').append(newrow);
-                let bgColor = ('#'+COLOR_PALLETE[key][i][n]);
-                newrow.style.backgroundColor = bgColor;
-                newrow.classList.add('pallet');
+            const table = document.querySelector('table');
+            let colCount = 0;
+            let currentRow = document.createElement('tr');
+            table.append(currentRow);
             
-                // if(COLOR_PALLETE[key][i][n]==''){
-                //     newrow.style.display='none';
-                // }
+            for (let n = 1; n < COLOR_PALLETE[key][i].length; n++) {
+              let newCol = document.createElement('td');
+              let bgColor = ('#' + COLOR_PALLETE[key][i][n]);
+              newCol.style.backgroundColor = bgColor;
+              newCol.classList.add('pallet');
+            
+              currentRow.append(newCol);
+              colCount++;
+            
+              if (colCount == 5) {
+                currentRow = document.createElement('tr');
+                table.append(currentRow);
+                colCount = 0;
+              }
             }
     }
 }
