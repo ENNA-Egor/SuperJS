@@ -2,10 +2,10 @@ for (let key in COLOR_PALLETE){
     let row = document.createElement('tr')
     row.innerHTML= `<th colspan="5">${key}</th>`
     document.querySelector('table').append(row)
-    for(let i=0; i<COLOR_PALLETE[key].length; i++ ){
+    for(let key2 in COLOR_PALLETE[key]){
         let row = document.createElement('tr')
         row.innerHTML =`
-            <td colspan="4" class="pod">${COLOR_PALLETE[key][i][0]}</td>
+            <td colspan="4" class="pod">${key2}</td>
             `
             document.querySelector('table').append(row)
             const table = document.querySelector('table');
@@ -13,9 +13,9 @@ for (let key in COLOR_PALLETE){
             let currentRow = document.createElement('tr');
             table.append(currentRow);
 
-            for (let n = 1; n < COLOR_PALLETE[key][i].length; n++) {
+            for (let n = 1; n < COLOR_PALLETE[key][key2].length; n++) {
               let newCol = document.createElement('td');
-              let bgColor = ('#' + COLOR_PALLETE[key][i][n]);
+              let bgColor = ('#' + COLOR_PALLETE[key][key2][n]);
               newCol.style.backgroundColor = bgColor;
               newCol.classList.add('pallet');
             
@@ -31,3 +31,9 @@ for (let key in COLOR_PALLETE){
     }
 }
 
+
+// delete COLOR_PALLETE.Custom.Золотой;
+// console.log(COLOR_PALLETE.Custom);
+// COLOR_PALLETE.Custom={'Новый':['5b82b3', '86cab9', 'd5e390', 'fafa98', 'c1faec']},
+
+//   console.log(COLOR_PALLETE.Custom);
