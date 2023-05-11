@@ -38,9 +38,23 @@ btn.addEventListener('click', function (event) {
   console.log(title);
   COLOR_PALLETE.Custom[title] = ['fafa98','1f8a70'];
   console.log(COLOR_PALLETE.Custom);
-})
+});
 
+var btn2 = document.querySelector('.btn2');
+btn2.addEventListener('click', function (event) {
+  alert('Ok');
+  localStorage.setItem('test', 1);
+});
 
+var btn3 = document.querySelector('.btn3');
+btn3.addEventListener('click', function () {
+  delete localStorage.test;
+});
+
+var btn4 = document.querySelector('.btn4');
+btn4.addEventListener('click', function () {
+  alert( localStorage.getItem('test') );
+});
 
 
 
