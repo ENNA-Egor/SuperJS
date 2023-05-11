@@ -31,9 +31,24 @@ for (let key in COLOR_PALLETE){
     }
 }
 
+var btn = document.querySelector('.btn');
+btn.addEventListener('click', function (event) {
+  console.log('Произошло событие', event.type)
+  const title = prompt('Выбери название цветовой схемы', 100);
+  console.log(title);
+  COLOR_PALLETE.Custom[title] = ['fafa98','1f8a70'];
+  console.log(COLOR_PALLETE.Custom);
+})
 
-// delete COLOR_PALLETE.Custom.Золотой;
-// console.log(COLOR_PALLETE.Custom);
-// COLOR_PALLETE.Custom={'Новый':['5b82b3', '86cab9', 'd5e390', 'fafa98', 'c1faec']},
+
+
+
+
+delete COLOR_PALLETE.Custom.Золотой;
+console.log(COLOR_PALLETE.Custom);
+COLOR_PALLETE.Custom.Новый =['fafa98','1f8a70', 'bedb39', 'ffff1a', '7f7fff', 'c1faec', 'd5e390', '628f2e', '14dcdc','fafa98','1f8a70', 'bedb39', 'ffff1a', '7f7fff']
+
+  // console.log(COLOR_PALLETE.Custom);
+// COLOR_PALLETE.Custom.Золотой =['5b82b3', '86cab9', 'd5e390', 'fafa98', 'c1faec'],
 
 //   console.log(COLOR_PALLETE.Custom);
