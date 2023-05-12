@@ -54,6 +54,9 @@ btn3.addEventListener('click', function () {
 var btn4 = document.querySelector('.btn4');
 btn4.addEventListener('click', function () {
   alert( localStorage.getItem('test'));
+  // let colorItem = localStorage.getItem('test')
+  // let colorItemJS = JSON.parse(colorItem);
+  // alert(colorItemJS[0]);
 });
 
 
