@@ -43,7 +43,7 @@ btn.addEventListener('click', function (event) {
 var btn2 = document.querySelector('.btn2');
 btn2.addEventListener('click', function (event) {
   alert('Ok');
-  localStorage.setItem('test', 1);
+  localStorage.setItem('test', JSON.stringify(COLOR_PALLETE));
 });
 
 var btn3 = document.querySelector('.btn3');
@@ -53,7 +53,7 @@ btn3.addEventListener('click', function () {
 
 var btn4 = document.querySelector('.btn4');
 btn4.addEventListener('click', function () {
-  alert( localStorage.getItem('test') );
+  alert( localStorage.getItem('test'));
 });
 
 
