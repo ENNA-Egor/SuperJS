@@ -9,7 +9,7 @@ for (let key in COLOR_PALLETE){
             `
             row.addEventListener('click', function(){
                 alert(this.textContent);
-                color_data(this.textContent);
+                colorMass(this.textContent);
             });
             document.querySelector('table').append(row)
             const table = document.querySelector('table');
@@ -77,17 +77,16 @@ btn4.addEventListener('click', function () {
   // console.log(typeof colorItem.Custom.Золотой[1])
 });
 
-function color_data(name){
-  alert(name);
-  let name2 =name;
-  console.log(name2);
+function colorMass(colorName){
+  alert(colorName);
+  console.log('"'+colorName+'"');
   alert( localStorage.getItem('test'));
   let colorItem = localStorage.getItem('test');
   colorItem =JSON.parse(colorItem);
-  let c = colorItem.Custom[name];
+  let c = colorItem.Custom['"'+colorName+'"'];
   alert(c);
-  // console.log(c);
-  console.log(c.length);
+  console.log(c);
+  // console.log(c.length);
   for(let i=0;i<c.length; i++){
     console.log(c[i]);
     alert(c[i]);
