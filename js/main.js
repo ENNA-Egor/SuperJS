@@ -1,11 +1,11 @@
 for (let key in COLOR_PALLETE){
     let row = document.createElement('tr')
-    row.innerHTML= `<th colspan="5">${key}</th>`
+    row.innerHTML= `<th colspan="5" class="${key}">${key}</th>`
     document.querySelector('table').append(row)
     for(let key2 in COLOR_PALLETE[key]){
         let row = document.createElement('tr')
         row.innerHTML =`
-            <td colspan="4" class="pod">${key2}</td>
+            <td colspan="4" class="pod ${key2}">${key2}</td>
             `
             document.querySelector('table').append(row)
             const table = document.querySelector('table');
@@ -13,7 +13,7 @@ for (let key in COLOR_PALLETE){
             let currentRow = document.createElement('tr');
             table.append(currentRow);
 
-            for (let n = 1; n < COLOR_PALLETE[key][key2].length; n++) {
+            for (let n = 0; n < COLOR_PALLETE[key][key2].length; n++) {
               let newCol = document.createElement('td');
               let bgColor = ('#' + COLOR_PALLETE[key][key2][n]);
               newCol.style.backgroundColor = bgColor;
@@ -54,9 +54,23 @@ btn3.addEventListener('click', function () {
 var btn4 = document.querySelector('.btn4');
 btn4.addEventListener('click', function () {
   alert( localStorage.getItem('test'));
-  // let colorItem = localStorage.getItem('test')
-  // let colorItemJS = JSON.parse(colorItem);
-  // alert(colorItemJS[0]);
+  let colorItem = localStorage.getItem('test');
+  colorItem =JSON.parse(colorItem);
+  // console.log(typeof colorItem);
+  // console.log(colorItem.Default);
+  // console.log(colorItem.Default.Бледный);
+  // console.log(colorItem.Default.Бледный[1]);
+  // console.log(colorItem.Custom);
+  // console.log(colorItem.Custom.Золотой);
+  // console.log(colorItem.Custom.Золотой[1]);
+  let c = colorItem.Custom["Золотой"];
+  // console.log(c);
+  console.log(c.length);
+  for(let i=0;i<c.length; i++){
+    console.log(c[i]);
+    alert(c[i]);
+  }
+  // console.log(typeof colorItem.Custom.Золотой[1])
 });
 
 
@@ -65,7 +79,7 @@ delete COLOR_PALLETE.Custom.Золотой;
 console.log(COLOR_PALLETE.Custom);
 COLOR_PALLETE.Custom.Новый =['fafa98','1f8a70', 'bedb39', 'ffff1a', '7f7fff', 'c1faec', 'd5e390', '628f2e', '14dcdc','fafa98','1f8a70', 'bedb39', 'ffff1a', '7f7fff']
 
-  // console.log(COLOR_PALLETE.Custom);
-// COLOR_PALLETE.Custom.Золотой =['5b82b3', '86cab9', 'd5e390', 'fafa98', 'c1faec'],
+  console.log(COLOR_PALLETE.Custom);
+COLOR_PALLETE.Custom.Золотой =['5b82b3', '86cab9', 'd5e390', 'fafa98', 'c1faec'],
 
-//   console.log(COLOR_PALLETE.Custom);
+  console.log(COLOR_PALLETE.Custom);
