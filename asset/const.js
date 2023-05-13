@@ -6,7 +6,7 @@ const COLOR_PALLETE ={
         'Нейтральный': ['14dcdc', 'ffff1a','1f8a70', 'bedb39', 'ffff1a', '7f7fff', 'c1faec', 'ba8db6', '7f44eb','004358', 'ffff1a','1f8a70', 'bedb39', 'ffff1a', '7f7fff', 'c1faec']
     },
     'Custom': {
-        'Неоновый': ['9a9afa', 'c9b1f4', '91a679'],
+        'glow': ['9a9afa', 'c9b1f4', '91a679'],
         'Золотой': ['5b82b3', '86cab9', 'd5e390', 'fafa98', 'c1faec'],
         'Любимый':['004358', '1f8a70', 'bedb39', 'ffff1a', '7f7fff'],
         'Новый 6': ['d5e390', '628f2e', '14dcdc','fafa98','1f8a70', 'bedb39', 'ffff1a', '7f7fff', 'c1faec', 'd5e390', '628f2e', '14dcdc','fafa98','1f8a70', 'bedb39', 'ffff1a', '7f7fff'],

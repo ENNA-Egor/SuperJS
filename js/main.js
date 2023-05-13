@@ -7,6 +7,10 @@ for (let key in COLOR_PALLETE){
         row.innerHTML =`
             <td colspan="4" class="pod ${key2}">${key2}</td>
             `
+            row.addEventListener('click', function(){
+                alert(this.textContent);
+                color_data(this.textContent);
+            });
             document.querySelector('table').append(row)
             const table = document.querySelector('table');
             let colCount = 0;
@@ -73,7 +77,22 @@ btn4.addEventListener('click', function () {
   // console.log(typeof colorItem.Custom.Золотой[1])
 });
 
-
+function color_data(name){
+  alert(name);
+  let name2 =name;
+  console.log(name2);
+  alert( localStorage.getItem('test'));
+  let colorItem = localStorage.getItem('test');
+  colorItem =JSON.parse(colorItem);
+  let c = colorItem.Custom[name];
+  alert(c);
+  // console.log(c);
+  console.log(c.length);
+  for(let i=0;i<c.length; i++){
+    console.log(c[i]);
+    alert(c[i]);
+  }
+};
 
 delete COLOR_PALLETE.Custom.Золотой;
 console.log(COLOR_PALLETE.Custom);
