@@ -1,19 +1,17 @@
 for (let key in COLOR_PALLETE){
     let row = document.createElement('tr')
-    row.innerHTML= `<th class="${key}">${key}</th>`
+    row.innerHTML= `<th colspan="5"class="head ${key}">${key}</th>`
     document.querySelector('table').append(row)
     for(let key2 in COLOR_PALLETE[key]){
         let row = document.createElement('tr')
         row.innerHTML =`
-            <td class="pod ${key2}">${key2}</td>
+            <td colspan="4"class="pod ${key2}">${key2}</td>
             `
             row.addEventListener('click', function(){
-                alert(this.textContent);
+                let realParent = this.closest('.head').append('<tr>!</tr>').prepend('<tr>?</tr>');; 
+                console.log(realParent)
                 let n =this.textContent.trim();
-                let nameConvert = ('"'+n+'"');
-                nameConvert.toString
-                alert(nameConvert);
-                colorMass(nameConvert);
+                colorMass(n);
             });
             document.querySelector('table').append(row)
             const table = document.querySelector('table');
@@ -82,19 +80,12 @@ btn4.addEventListener('click', function () {
 });
 
 function colorMass(colorName){
-  alert(colorName);
-  console.log(colorName);
-  console.log(typeof colorName);
-  alert( localStorage.getItem('test'));
   let colorItem = localStorage.getItem('test');
   colorItem =JSON.parse(colorItem);
   let c = colorItem.Custom[colorName];
-  alert(c);
   console.log(c);
-  // console.log(c.length);
   for(let i=0;i<c.length; i++){
     console.log(c[i]);
-    alert(c[i]);
   }
 };
 
@@ -106,19 +97,3 @@ function colorMass(colorName){
 // COLOR_PALLETE.Custom.Золотой =['5b82b3', '86cab9', 'd5e390', 'fafa98', 'c1faec'],
 
 //   console.log(COLOR_PALLETE.Custom);
-
-// var strVar = "Какой то очень \"большой\” текст.";
-
-// alert(strVar);
-
-// var strVar2 = 'Какой то очень \'большой\' текст.';
-
-// alert(strVar2);
-
-// var strVar3 = "Какой то очень 'большой' текст.";
-
-// alert(strVar3);
-
-// var strVar4 = 'Какой то очень "большой" текст.';
-
-// alert(strVar4);
