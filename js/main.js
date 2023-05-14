@@ -11,6 +11,7 @@ for (let key in COLOR_PALLETE){
                 alert(this.textContent);
                 let n =this.textContent.trim();
                 let nameConvert = ('"'+n+'"');
+                nameConvert.toString
                 alert(nameConvert);
                 colorMass(nameConvert);
             });
@@ -83,6 +84,7 @@ btn4.addEventListener('click', function () {
 function colorMass(colorName){
   alert(colorName);
   console.log(colorName);
+  console.log(typeof colorName);
   alert( localStorage.getItem('test'));
   let colorItem = localStorage.getItem('test');
   colorItem =JSON.parse(colorItem);
@@ -104,3 +106,19 @@ function colorMass(colorName){
 // COLOR_PALLETE.Custom.Золотой =['5b82b3', '86cab9', 'd5e390', 'fafa98', 'c1faec'],
 
 //   console.log(COLOR_PALLETE.Custom);
+
+// var strVar = "Какой то очень \"большой\” текст.";
+
+// alert(strVar);
+
+// var strVar2 = 'Какой то очень \'большой\' текст.';
+
+// alert(strVar2);
+
+// var strVar3 = "Какой то очень 'большой' текст.";
+
+// alert(strVar3);
+
+// var strVar4 = 'Какой то очень "большой" текст.';
+
+// alert(strVar4);
