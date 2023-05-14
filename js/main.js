@@ -1,15 +1,18 @@
 for (let key in COLOR_PALLETE){
     let row = document.createElement('tr')
-    row.innerHTML= `<th colspan="5" class="${key}">${key}</th>`
+    row.innerHTML= `<th class="${key}">${key}</th>`
     document.querySelector('table').append(row)
     for(let key2 in COLOR_PALLETE[key]){
         let row = document.createElement('tr')
         row.innerHTML =`
-            <td colspan="4" class="pod ${key2}">${key2}</td>
+            <td class="pod ${key2}">${key2}</td>
             `
             row.addEventListener('click', function(){
                 alert(this.textContent);
-                colorMass(this.textContent);
+                let n =this.textContent.trim();
+                let nameConvert = ('"'+n+'"');
+                alert(nameConvert);
+                colorMass(nameConvert);
             });
             document.querySelector('table').append(row)
             const table = document.querySelector('table');
@@ -79,11 +82,11 @@ btn4.addEventListener('click', function () {
 
 function colorMass(colorName){
   alert(colorName);
-  console.log('"'+colorName+'"');
+  console.log(colorName);
   alert( localStorage.getItem('test'));
   let colorItem = localStorage.getItem('test');
   colorItem =JSON.parse(colorItem);
-  let c = colorItem.Custom['"'+colorName+'"'];
+  let c = colorItem.Custom[colorName];
   alert(c);
   console.log(c);
   // console.log(c.length);
@@ -93,11 +96,11 @@ function colorMass(colorName){
   }
 };
 
-delete COLOR_PALLETE.Custom.Золотой;
-console.log(COLOR_PALLETE.Custom);
-COLOR_PALLETE.Custom.Новый =['fafa98','1f8a70', 'bedb39', 'ffff1a', '7f7fff', 'c1faec', 'd5e390', '628f2e', '14dcdc','fafa98','1f8a70', 'bedb39', 'ffff1a', '7f7fff']
+// delete COLOR_PALLETE.Custom.Золотой;
+// console.log(COLOR_PALLETE.Custom);
+// COLOR_PALLETE.Custom.Новый =['fafa98','1f8a70', 'bedb39', 'ffff1a', '7f7fff', 'c1faec', 'd5e390', '628f2e', '14dcdc','fafa98','1f8a70', 'bedb39', 'ffff1a', '7f7fff']
 
-  console.log(COLOR_PALLETE.Custom);
-COLOR_PALLETE.Custom.Золотой =['5b82b3', '86cab9', 'd5e390', 'fafa98', 'c1faec'],
+//   console.log(COLOR_PALLETE.Custom);
+// COLOR_PALLETE.Custom.Золотой =['5b82b3', '86cab9', 'd5e390', 'fafa98', 'c1faec'],
 
-  console.log(COLOR_PALLETE.Custom);
+//   console.log(COLOR_PALLETE.Custom);
