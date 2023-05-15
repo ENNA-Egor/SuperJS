@@ -8,8 +8,6 @@ for (let key in COLOR_PALLETE){
             <td colspan="4"class="pod ${key2}">${key2}</td>
             `
             row.addEventListener('click', function(){
-            //  let y = this.closest("tr");
-            //  alert(y);
                 let n =this.textContent.trim();
                 colorMass(n);
             });
@@ -57,6 +55,15 @@ btn3.addEventListener('click', function () {
   delete localStorage.test;
 });
 
+var btn4 = document.querySelector('.btn4');
+btn4.addEventListener('click', function () {
+  alert( localStorage.getItem('test'));
+  let colorItem = localStorage.getItem('test');
+  colorItem =JSON.parse(colorItem);
+  let c = colorItem.Custom;
+  console.log(c);
+
+});
 
 // function colorMass(colorName){ //получение данных из LocalStorage
 //   let colorItem = localStorage.getItem('test');
