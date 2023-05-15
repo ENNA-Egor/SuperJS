@@ -57,27 +57,6 @@ btn3.addEventListener('click', function () {
   delete localStorage.test;
 });
 
-var btn4 = document.querySelector('.btn4');
-btn4.addEventListener('click', function () {
-  alert( localStorage.getItem('test'));
-  let colorItem = localStorage.getItem('test');
-  colorItem =JSON.parse(colorItem);
-  // console.log(typeof colorItem);
-  // console.log(colorItem.Default);
-  // console.log(colorItem.Default.Бледный);
-  // console.log(colorItem.Default.Бледный[1]);
-  // console.log(colorItem.Custom);
-  // console.log(colorItem.Custom.Золотой);
-  // console.log(colorItem.Custom.Золотой[1]);
-  let c = colorItem.Custom["Золотой"];
-  // console.log(c);
-  console.log(c.length);
-  for(let i=0;i<c.length; i++){
-    console.log(c[i]);
-    alert(c[i]);
-  }
-  // console.log(typeof colorItem.Custom.Золотой[1])
-});
 
 // function colorMass(colorName){ //получение данных из LocalStorage
 //   let colorItem = localStorage.getItem('test');
@@ -102,8 +81,6 @@ function colorMass(colorName){  //получение данных из файл�
   let colorItem = COLOR_PALLETE;
   let c = colorItem.Custom[colorName];
   let d = colorItem.Default[colorName];
-  console.log(c);
-  console.log(d);
   if(d==undefined){
     for(let i=0;i<c.length; i++){
       console.log(c[i]);
