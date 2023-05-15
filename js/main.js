@@ -79,9 +79,29 @@ btn4.addEventListener('click', function () {
   // console.log(typeof colorItem.Custom.Золотой[1])
 });
 
-function colorMass(colorName){
-  let colorItem = localStorage.getItem('test');
-  colorItem =JSON.parse(colorItem);
+// function colorMass(colorName){ //получение данных из LocalStorage
+//   let colorItem = localStorage.getItem('test');
+//   colorItem =JSON.parse(colorItem);
+//   let c = colorItem.Custom[colorName];
+//   let d = colorItem.Default[colorName];
+//   console.log(c);
+//   console.log(d);
+//   if(d==undefined){
+//     for(let i=0;i<c.length; i++){
+//       console.log(c[i]);
+//     }
+//   } else{
+//     for(let i=0;i<d.length; i++){
+//       console.log(d[i]);
+//   }
+// }
+// };
+
+
+function colorMass(colorName){  //получение данных из файла const.js
+  let colorItem = COLOR_PALLETE;
+  // colorItem =JSON.parse(colorItem);
+  console.log(colorItem);
   let c = colorItem.Custom[colorName];
   let d = colorItem.Default[colorName];
   console.log(c);
