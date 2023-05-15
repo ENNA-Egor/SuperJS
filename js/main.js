@@ -100,8 +100,6 @@ btn4.addEventListener('click', function () {
 
 function colorMass(colorName){  //получение данных из файла const.js
   let colorItem = COLOR_PALLETE;
-  // colorItem =JSON.parse(colorItem);
-  console.log(colorItem);
   let c = colorItem.Custom[colorName];
   let d = colorItem.Default[colorName];
   console.log(c);
