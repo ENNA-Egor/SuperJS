@@ -89,10 +89,12 @@ function colorMass(colorName){  //получение данных из файл�
   let c = colorItem.Custom[colorName];
   let d = colorItem.Default[colorName];
   if(d==undefined){
-    for(let i=0;i<c.length; i++){
+    console.log(c);
+    for(let i=0;i<c.length; i++){ 
       console.log(c[i]);
     }
   } else{
+    console.log(d)
     for(let i=0;i<d.length; i++){
       console.log(d[i]);
   }
