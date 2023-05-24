@@ -4,9 +4,12 @@ body{
 
 th{
     /* border: 1px solid rgb(255, 0, 0); */
-    background-color: rgb(255, 243, 192);
+    background-color: rgb(58, 58, 58);;
     text-transform: uppercase;
     font-size: 12px;
+    border: 1px solid antiquewhite;
+    color: antiquewhite;
+    border-radius: 3px;
 }
 td {
     /* border: 1px solid rgb(74, 185, 98); */
@@ -16,8 +19,12 @@ td {
 
 .pod, .but{
     /* border: 1px solid rgb(76, 74, 185); */
-    background-color: rgb(227, 252, 199);
+    background-color: rgb(58, 58, 58);
     text-align: center;
+    font-size: 12px;
+    color: antiquewhite;
+    border: 1px solid antiquewhite;
+    border-radius: 3px;
     /* text-transform: lowercase; */
 }
 
@@ -28,7 +35,7 @@ td {
 h3{
     padding: auto;
     margin: 0;
-    color: rgb(43, 152, 255);
+    color: antiquewhite;
     text-transform: uppercase;
 }
 .pallet{
