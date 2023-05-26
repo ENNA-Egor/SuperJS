@@ -35,7 +35,7 @@ for (let key in COLOR_PALLETE){
     }
 }
 
-var btn = document.querySelector('.btn');
+let btn = document.querySelector('.btn');
 btn.addEventListener('click', function (event) {
   console.log('Произошло событие', event.type)
   const title = prompt('Выбери название цветовой схемы', 100);
@@ -44,18 +44,18 @@ btn.addEventListener('click', function (event) {
   console.log(COLOR_PALLETE.Custom);
 });
 
-var btn2 = document.querySelector('.btn2');
+let btn2 = document.querySelector('.btn2');
 btn2.addEventListener('click', function (event) {
   alert('Ok');
   localStorage.setItem('test', JSON.stringify(COLOR_PALLETE));
 });
 
-var btn3 = document.querySelector('.btn3');
+let btn3 = document.querySelector('.btn3');
 btn3.addEventListener('click', function () {
   delete localStorage.test;
 });
 
-var btn4 = document.querySelector('.btn4');
+let btn4 = document.querySelector('.btn4');
 btn4.addEventListener('click', function () {
   alert( localStorage.getItem('test'));
   let colorItem = localStorage.getItem('test');
@@ -90,15 +90,11 @@ function colorMass(colorName){  //получение данных из файл�
   let d = colorItem.Default[colorName];
   if(d==undefined){
     console.log(c);
-    for(let i=0;i<c.length; i++){ 
-      console.log(c[i]);
-    }
-  } else{
-    console.log(d)
-    for(let i=0;i<d.length; i++){
-      console.log(d[i]);
+    c.forEach(color => console.log(color));
+  } else {
+    console.log(d);
+    d.forEach(color => console.log(color));
   }
-}
 };
 
 // delete COLOR_PALLETE.Custom.Золотой;
